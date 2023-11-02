@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Freelancing\\Road Go\\Final\\Final Project Solution\\Final Project\\Final Project.csproj",
+      "projectUniqueName": "D:\\.Net track(ITI)\\Final Project(Vezeeta)\\sol_Github\\Final Project Solution\\Final Project\\Final Project.csproj",
       "projectName": "Final Project",
-      "projectPath": "D:\\Freelancing\\Road Go\\Final\\Final Project Solution\\Final Project\\Final Project.csproj",
+      "projectPath": "D:\\.Net track(ITI)\\Final Project(Vezeeta)\\sol_Github\\Final Project Solution\\Final Project\\Final Project.csproj",
       "packagesPath": "C:\\Users\\zez32\\.nuget\\packages\\",
-      "outputPath": "D:\\Freelancing\\Road Go\\Final\\Final Project Solution\\Final Project\\obj\\",
+      "outputPath": "D:\\.Net track(ITI)\\Final Project(Vezeeta)\\sol_Github\\Final Project Solution\\Final Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zez32\\AppData\\Roaming\\NuGet\\NuGet.Config",
