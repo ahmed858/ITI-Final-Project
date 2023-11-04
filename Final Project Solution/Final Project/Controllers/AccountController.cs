@@ -24,10 +24,31 @@ namespace Final_Project.Controllers
             this.userManager = userManager;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var users = await userManager.GetUsersInRoleAsync("Doctor");
+            List<UserRegisterVM> doctors = new List<UserRegisterVM>();
+            foreach (var doc in users)
+            {
+                doctors.Add(new UserRegisterVM()
+                {
+                    
+                    UserName = doc.UserName,
+                    PhoneNumber = doc.PhoneNumber,
+                    Email = doc.Email,
+                    SpecialistDoctor = db.SpecialDoctors.FirstOrDefault(d => d.DoctorId == doc.Id).SpecialName,
+                    Gender = doc.Gender,
+                    Age = doc.Age,
+                    City = doc.City,
+                    Country=doc.Country,
+                    Region=doc.Region,
+                    Doctor_State=doc.Doctor_State
+                }) ; 
+                
+            }
+
             ViewBag.AllRoles = GetAllRoles();
-            return View();
+            return View(doctors);
         }
         [HttpGet]
 
@@ -61,7 +82,7 @@ namespace Final_Project.Controllers
                 if (result.Succeeded)
                 {
                     // Get the last User ID
-                     string lastDoctorId = userManager.Users.OrderByDescending(d => d.Id).FirstOrDefault().Id;
+                     string lastDoctorId = userManager.Users.OrderBy(d => d.Id).FirstOrDefault().Id;
                     // Create a new phone User 
                     PhoneUser phone = new PhoneUser()
                     {
@@ -114,6 +135,15 @@ namespace Final_Project.Controllers
             }).ToList();
 
             return AllRoles;
+        }
+
+        public async Task<bool> IsEmailAvailable(string Email)
+        {
+            // Check if the email address is already in use
+            var userWithEmail = await userManager.FindByEmailAsync(Email);
+            if(userWithEmail == null)
+                return true;
+            return false;
         }
 
         [HttpGet]
