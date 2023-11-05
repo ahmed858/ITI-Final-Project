@@ -20,7 +20,6 @@ namespace Final_Project
             builder.Services.AddDbContext<DataContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-<<<<<<< HEAD
             // builder.Services.AddIdentity<Patient, IdentityRole>()
             //.AddEntityFrameworkStores<DataContext>()
             //.AddDefaultTokenProviders();
@@ -29,10 +28,6 @@ namespace Final_Project
             //  .AddEntityFrameworkStores<DataContext>()
             //   .AddDefaultTokenProviders();
             builder.Services.AddScoped<IRepository<Clinic>, Repository<Clinic>>();
-=======
-            builder.Services.AddScoped<UserRepositry>();
-
->>>>>>> 664cbf4b6d07f518a433f35fa4bc61167431c2a5
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<DataContext>()
                 .AddDefaultTokenProviders()

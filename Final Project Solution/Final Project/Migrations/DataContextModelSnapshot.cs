@@ -259,33 +259,21 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = "1",
-<<<<<<< HEAD
                             ConcurrencyStamp = "702e5918-40cc-4bc8-8204-2af7ff6fd5b5",
-=======
-                            ConcurrencyStamp = "af77d0ad-c7a6-4fe9-a2ef-ceefd5669f20",
->>>>>>> 664cbf4b6d07f518a433f35fa4bc61167431c2a5
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "2",
-<<<<<<< HEAD
                             ConcurrencyStamp = "3c434a7a-9f69-4f0f-878a-869b4a4434d4",
-=======
-                            ConcurrencyStamp = "b9cee132-c171-43cb-9022-1c4139f900f3",
->>>>>>> 664cbf4b6d07f518a433f35fa4bc61167431c2a5
                             Name = "Doctor",
                             NormalizedName = "DOCTOR"
                         },
                         new
                         {
                             Id = "3",
-<<<<<<< HEAD
                             ConcurrencyStamp = "b7a54dbe-9ccd-49bc-96bc-d6d7ac57ccff",
-=======
-                            ConcurrencyStamp = "a995f392-84cb-4cf3-aaa3-a5814270d47c",
->>>>>>> 664cbf4b6d07f518a433f35fa4bc61167431c2a5
                             Name = "Patient",
                             NormalizedName = "PATIENT"
                         });
@@ -490,23 +478,13 @@ namespace Final_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
-<<<<<<< HEAD
-=======
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageName")
-                        .IsRequired()
->>>>>>> 664cbf4b6d07f518a433f35fa4bc61167431c2a5
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Region")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
                     b.HasIndex("ClinicId");
 
-=======
->>>>>>> 664cbf4b6d07f518a433f35fa4bc61167431c2a5
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 

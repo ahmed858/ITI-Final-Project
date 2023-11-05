@@ -4,54 +4,30 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Final_Project.ViewModel;
-using Final_Project.Repositary;
 
 namespace Final_Project.Controllers
 {
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly UserRepositry userRepositry;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly DataContext db;
 
         public AccountController(SignInManager<ApplicationUser> _signInManager, RoleManager<IdentityRole> roleManager,
-            DataContext _db,UserManager<ApplicationUser> userManager,UserRepositry _userRepositry)
+            DataContext _db,UserManager<ApplicationUser> userManager)
         {
            
             this.signInManager = _signInManager;
             this.roleManager = roleManager;
             db = _db;
             this.userManager = userManager;
-            userRepositry = _userRepositry;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var users = await userManager.GetUsersInRoleAsync("Doctor");
-            List<UserRegisterVM> doctors = new List<UserRegisterVM>();
-            foreach (var doc in users)
-            {
-                doctors.Add(new UserRegisterVM()
-                {
-                    
-                    UserName = doc.UserName,
-                    PhoneNumber = doc.PhoneNumber,
-                    Email = doc.Email,
-                    SpecialistDoctor = db.SpecialDoctors.FirstOrDefault(d => d.DoctorId == doc.Id).SpecialName,
-                    Gender = doc.Gender,
-                    Age = doc.Age,
-                    City = doc.City,
-                    Country=doc.Country,
-                    Region=doc.Region,
-                    Doctor_State=doc.Doctor_State
-                }) ; 
-                
-            }
-
             ViewBag.AllRoles = GetAllRoles();
-            return View("OurDoctors", doctors);
+            return View();
         }
         [HttpGet]
 
@@ -63,12 +39,11 @@ namespace Final_Project.Controllers
 
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> Registration(UserRegisterVM NewUser,IFormFile? Image)
+        public async Task<IActionResult> Registration(UserRegisterVM NewUser)
         {
             ViewBag.AllRoles = GetAllRoles(); //view bag to retrun all Role 
             if (ModelState.IsValid)
             {
-                string imageName=userRepositry.UploadFile(Image);
                 ApplicationUser user = new ApplicationUser()
                 {
                     UserName = NewUser.UserName,
@@ -80,14 +55,13 @@ namespace Final_Project.Controllers
                     City=NewUser.City,
                     Region= NewUser.Region,
                     Doctor_State = NewUser.Doctor_State,
-                    ImageName=imageName
                 };
                 // Create the new User record
                 IdentityResult result = await userManager.CreateAsync(user, NewUser.Password);
                 if (result.Succeeded)
                 {
                     // Get the last User ID
-                     string lastDoctorId = userManager.Users.OrderBy(d => d.Id).FirstOrDefault().Id;
+                     string lastDoctorId = userManager.Users.OrderByDescending(d => d.Id).FirstOrDefault().Id;
                     // Create a new phone User 
                     PhoneUser phone = new PhoneUser()
                     {
@@ -140,15 +114,6 @@ namespace Final_Project.Controllers
             }).ToList();
 
             return AllRoles;
-        }
-
-        public async Task<bool> IsEmailAvailable(string Email)
-        {
-            // Check if the email address is already in use
-            var userWithEmail = await userManager.FindByEmailAsync(Email);
-            if(userWithEmail == null)
-                return true;
-            return false;
         }
 
         [HttpGet]
