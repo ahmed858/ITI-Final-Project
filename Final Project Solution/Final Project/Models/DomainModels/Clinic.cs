@@ -10,6 +10,7 @@
         public List<Appointment>? Appointments { get; set; }
         public List<Clinic_Area>? Clinic_Areas { get; set; }
         public List<Clinic_patient>? Clinic_Patients { get; set; }
+        public List<ApplicationUser>? Clinic_Doctors { get; set; }
     }
 
 }

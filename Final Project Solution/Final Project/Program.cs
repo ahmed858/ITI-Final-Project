@@ -1,6 +1,7 @@
 
 using Final_Project.Models.DataContext;
 using Final_Project.Models.DomainModels;
+using Final_Project.Repositary;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -26,7 +27,7 @@ namespace Final_Project
             // builder.Services.AddIdentity<Doctor, IdentityRole>()
             //  .AddEntityFrameworkStores<DataContext>()
             //   .AddDefaultTokenProviders();
-
+            builder.Services.AddScoped<IRepository<Clinic>, Repository<Clinic>>();
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<DataContext>()
                 .AddDefaultTokenProviders()
@@ -48,7 +49,7 @@ namespace Final_Project
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            //app.UseSession();   
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

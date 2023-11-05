@@ -1,0 +1,58 @@
+﻿@model Final_Project.Models.DomainModels.Clinic
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+@* <div>
+    <h4>Clinic</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+    </dl>
+</div> *@
+<dl class="row">
+    <dt class="col-sm-2">
+        <label asp-for="Email"></label>
+    </dt>
+    <dd class="col-sm-10">
+        <span asp-for="Email">@Model.Email</span>
+    </dd>
+    <dt class="col-sm-2">
+        <label asp-for="Name"></label>
+    </dt>
+    <dd class="col-sm-10">
+        <span asp-for="Name">@Model.Name</span>
+    </dd>
+    <dt class="col-sm-2">
+        <label asp-for="Address"></label>
+    </dt>
+    <dd class="col-sm-10">
+        <span asp-for="Address">@Model.Address</span>
+    </dd>
+</dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
