@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\Final Project Iti\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj": {}
   },
   "projects": {
@@ -19,6 +20,22 @@
         "configFilePaths": [
           "C:\\Users\\iTi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+    "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj": {}
+  },
+  "projects": {
+    "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
+        "projectName": "Final Project",
+        "projectPath": "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
+        "packagesPath": "C:\\Users\\E-MaxIT\\.nuget\\packages\\",
+        "outputPath": "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\E-MaxIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 664cbf4b6d07f518a433f35fa4bc61167431c2a5
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +43,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
           "C:\\Program Files\\dotnet\\library-packs": {},
+=======
+>>>>>>> 664cbf4b6d07f518a433f35fa4bc61167431c2a5
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,7 +107,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+>>>>>>> 664cbf4b6d07f518a433f35fa4bc61167431c2a5
         }
       }
     }

@@ -43,19 +43,7 @@ namespace Final_Project.Repositary
             db.SaveChanges();
         }
       
-        public string UploadFile(IFormFile image)
-        {
 
-            string uploadsFolder = Path.Combine("wwwroot", "Images");
-            string ImageName = image.FileName; //Guid.NewGuid().ToString() + "_" +
-            string filePath = Path.Combine(uploadsFolder, ImageName);
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
-            {
-                image.CopyTo(fileStream);
-            }
-            return ImageName;
-
-        }
 
       
 
