@@ -259,21 +259,21 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "4380c81e-b13e-4f8a-b9e0-0e42d6b78e5c",
+                            ConcurrencyStamp = "af77d0ad-c7a6-4fe9-a2ef-ceefd5669f20",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "7c8b655a-83f7-4a71-9dcc-a7e3876e072e",
+                            ConcurrencyStamp = "b9cee132-c171-43cb-9022-1c4139f900f3",
                             Name = "Doctor",
                             NormalizedName = "DOCTOR"
                         },
                         new
                         {
                             Id = "3",
-                            ConcurrencyStamp = "c8ada9a5-e4cc-4b64-92c5-04154e3d8bb7",
+                            ConcurrencyStamp = "a995f392-84cb-4cf3-aaa3-a5814270d47c",
                             Name = "Patient",
                             NormalizedName = "PATIENT"
                         });
@@ -458,64 +458,45 @@ namespace Final_Project.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Final_Project.Models.DomainModels.Doctor", b =>
+            modelBuilder.Entity("Final_Project.Models.DomainModels.ApplicationUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
                     b.Property<int?>("Age")
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("int");
 
                     b.Property<string>("City")
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Doctor_State")
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
-                        .ValueGeneratedOnUpdateSometimes()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Region")
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
+                });
+
+            modelBuilder.Entity("Final_Project.Models.DomainModels.Doctor", b =>
+                {
+                    b.HasBaseType("Final_Project.Models.DomainModels.ApplicationUser");
 
                     b.HasDiscriminator().HasValue("Doctor");
                 });
 
             modelBuilder.Entity("Final_Project.Models.DomainModels.Patient", b =>
                 {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
-
-                    b.Property<int?>("Age")
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("int");
-
-                    b.Property<string>("City")
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Country")
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Doctor_State")
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Gender")
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Region")
-                        .ValueGeneratedOnUpdateSometimes()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasBaseType("Final_Project.Models.DomainModels.ApplicationUser");
 
                     b.HasDiscriminator().HasValue("Patient");
                 });

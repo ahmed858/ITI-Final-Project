@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Registration">
+        <form asp-action="Registration" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="UserName" class="control-label"></label>
@@ -53,6 +53,11 @@
                     <select asp-for="RoleName" asp-items="@ViewBag.AllRoles" class="form-control">
                     </select>
                 </div>
+            </div>
+            <div class="form-group SpecialistDoctordiv">
+                <label asp-for="Image" class="control-label">select Image</label>
+                <input type="file" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
             </div>
             <div class="form-group SpecialistDoctordiv">
                 <label asp-for="Country" class="control-label"></label>

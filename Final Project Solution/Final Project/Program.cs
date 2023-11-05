@@ -1,6 +1,7 @@
 
 using Final_Project.Models.DataContext;
 using Final_Project.Models.DomainModels;
+using Final_Project.Repositary;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -19,13 +20,7 @@ namespace Final_Project
             builder.Services.AddDbContext<DataContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            // builder.Services.AddIdentity<Patient, IdentityRole>()
-            //.AddEntityFrameworkStores<DataContext>()
-            //.AddDefaultTokenProviders();
-
-            // builder.Services.AddIdentity<Doctor, IdentityRole>()
-            //  .AddEntityFrameworkStores<DataContext>()
-            //   .AddDefaultTokenProviders();
+            builder.Services.AddScoped<UserRepositry>();
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<DataContext>()

@@ -11279,23 +11279,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yehia\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\E-MaxIT\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Iti Grduate Project\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
+      "projectUniqueName": "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
       "projectName": "Final Project",
-      "projectPath": "D:\\Iti Grduate Project\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
-      "packagesPath": "C:\\Users\\yehia\\.nuget\\packages\\",
-      "outputPath": "D:\\Iti Grduate Project\\ITI-Final-Project\\Final Project Solution\\Final Project\\obj\\",
+      "projectPath": "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
+      "packagesPath": "C:\\Users\\E-MaxIT\\.nuget\\packages\\",
+      "outputPath": "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\yehia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\E-MaxIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11303,7 +11299,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.310\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11364,7 +11359,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
