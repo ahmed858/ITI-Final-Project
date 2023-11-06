@@ -35,7 +35,7 @@ namespace Final_Project.Controllers
             {
                 doctors.Add(new UserRegisterVM()
                 {
-                    
+                    Id=doc.Id,
                     UserName = doc.UserName,
                     PhoneNumber = doc.PhoneNumber,
                     Email = doc.Email,
@@ -45,12 +45,15 @@ namespace Final_Project.Controllers
                     City = doc.City,
                     Country=doc.Country,
                     Region=doc.Region,
-                    Doctor_State=doc.Doctor_State
+                    Doctor_State=doc.Doctor_State,
+                    ImageName = doc.ImageName
+                    
                 }) ; 
                 
             }
 
             ViewBag.AllRoles = GetAllRoles();
+            //return PartialView("_OurDoctors", doctors);
             return View("OurDoctors", doctors);
         }
         [HttpGet]
@@ -63,12 +66,12 @@ namespace Final_Project.Controllers
 
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> Registration(UserRegisterVM NewUser,IFormFile? Image)
+        public async Task<IActionResult> Registration(UserRegisterVM NewUser)
         {
             ViewBag.AllRoles = GetAllRoles(); //view bag to retrun all Role 
             if (ModelState.IsValid)
             {
-                string imageName=userRepositry.UploadFile(Image);
+                string imageName=userRepositry.UploadFile(NewUser.Image);
                 ApplicationUser user = new ApplicationUser()
                 {
                     UserName = NewUser.UserName,
@@ -86,12 +89,13 @@ namespace Final_Project.Controllers
                 IdentityResult result = await userManager.CreateAsync(user, NewUser.Password);
                 if (result.Succeeded)
                 {
+                    ApplicationUser UserRegister = await userManager.FindByEmailAsync(user.Email);
                     // Get the last User ID
-                     string lastDoctorId = userManager.Users.OrderBy(d => d.Id).FirstOrDefault().Id;
+                     string userRegisterId = UserRegister.Id;
                     // Create a new phone User 
                     PhoneUser phone = new PhoneUser()
                     {
-                        UserId = lastDoctorId,
+                        UserId = userRegisterId,
                         PhoneNumber = NewUser.PhoneNumber
                     };
                     db.PhoneUsers.Add(phone);
@@ -99,7 +103,7 @@ namespace Final_Project.Controllers
                     {
                         SpecialDoctor specialDoctor = new SpecialDoctor
                         {
-                            DoctorId = lastDoctorId,
+                            DoctorId = userRegisterId,
                             SpecialName = NewUser.SpecialistDoctor
                         };
                         db.SpecialDoctors.Add(specialDoctor);
@@ -168,7 +172,7 @@ namespace Final_Project.Controllers
                 {
                     //Create cookies
                     Microsoft.AspNetCore.Identity.SignInResult result =
-                        await signInManager.PasswordSignInAsync(User, userLogin.Password, userLogin.IsPersisite, false); //create cookie
+                        await signInManager.PasswordSignInAsync(User, userLogin.Password, userLogin.IsPersisite,false); //create cookie
                     if (result.Succeeded)
                     {
                         return LocalRedirect(ReturnUrl);

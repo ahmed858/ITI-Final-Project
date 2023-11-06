@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb25Eb2N0b3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Doctor/Detailes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERldGFpbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Shared/_OurDoctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9PdXJEb2N0b3JzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Shared/_ValidationScriptsPartial.cshtml]
