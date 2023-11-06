@@ -11279,19 +11279,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\E-MaxIT\\.nuget\\packages\\": {}
+    "C:\\Users\\iTi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
+      "projectUniqueName": "E:\\Final Project Iti\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
       "projectName": "Final Project",
-      "projectPath": "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
-      "packagesPath": "C:\\Users\\E-MaxIT\\.nuget\\packages\\",
-      "outputPath": "D:\\VisualApps\\New folder\\ITI-Final-Project\\Final Project Solution\\Final Project\\obj\\",
+      "projectPath": "E:\\Final Project Iti\\ITI-Final-Project\\Final Project Solution\\Final Project\\Final Project.csproj",
+      "packagesPath": "C:\\Users\\iTi\\.nuget\\packages\\",
+      "outputPath": "E:\\Final Project Iti\\ITI-Final-Project\\Final Project Solution\\Final Project\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\E-MaxIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\iTi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11299,6 +11304,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11359,7 +11365,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

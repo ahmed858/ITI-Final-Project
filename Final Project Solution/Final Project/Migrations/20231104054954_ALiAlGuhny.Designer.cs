@@ -4,6 +4,7 @@ using Final_Project.Models.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final_Project.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20231104054954_ALiAlGuhny")]
+    partial class ALiAlGuhny
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -259,21 +262,21 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "702e5918-40cc-4bc8-8204-2af7ff6fd5b5",
+                            ConcurrencyStamp = "417e0278-3829-4a0f-8dbc-b000345b00d2",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "3c434a7a-9f69-4f0f-878a-869b4a4434d4",
+                            ConcurrencyStamp = "52b88947-44c5-42fd-8cfb-d63cbaf484a9",
                             Name = "Doctor",
                             NormalizedName = "DOCTOR"
                         },
                         new
                         {
                             Id = "3",
-                            ConcurrencyStamp = "b7a54dbe-9ccd-49bc-96bc-d6d7ac57ccff",
+                            ConcurrencyStamp = "6b013644-b183-4e00-9433-20e95409b836",
                             Name = "Patient",
                             NormalizedName = "PATIENT"
                         });
@@ -468,9 +471,6 @@ namespace Final_Project.Migrations
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ClinicId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
@@ -482,8 +482,6 @@ namespace Final_Project.Migrations
 
                     b.Property<string>("Region")
                         .HasColumnType("nvarchar(max)");
-
-                    b.HasIndex("ClinicId");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
@@ -664,22 +662,11 @@ namespace Final_Project.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Final_Project.Models.DomainModels.ApplicationUser", b =>
-                {
-                    b.HasOne("Final_Project.Models.DomainModels.Clinic", "Clinic")
-                        .WithMany("Clinic_Doctors")
-                        .HasForeignKey("ClinicId");
-
-                    b.Navigation("Clinic");
-                });
-
             modelBuilder.Entity("Final_Project.Models.DomainModels.Clinic", b =>
                 {
                     b.Navigation("Appointments");
 
                     b.Navigation("Clinic_Areas");
-
-                    b.Navigation("Clinic_Doctors");
 
                     b.Navigation("Clinic_Patients");
 

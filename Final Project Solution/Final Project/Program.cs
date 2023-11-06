@@ -20,8 +20,14 @@ namespace Final_Project
             builder.Services.AddDbContext<DataContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddScoped<UserRepositry>();
+            // builder.Services.AddIdentity<Patient, IdentityRole>()
+            //.AddEntityFrameworkStores<DataContext>()
+            //.AddDefaultTokenProviders();
 
+            // builder.Services.AddIdentity<Doctor, IdentityRole>()
+            //  .AddEntityFrameworkStores<DataContext>()
+            //   .AddDefaultTokenProviders();
+            builder.Services.AddScoped<IRepository<Clinic>, Repository<Clinic>>();
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<DataContext>()
                 .AddDefaultTokenProviders()
@@ -43,7 +49,7 @@ namespace Final_Project
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            //app.UseSession();   
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

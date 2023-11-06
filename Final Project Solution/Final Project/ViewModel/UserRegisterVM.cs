@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Final_Project.ViewModel
 {
@@ -7,15 +6,15 @@ namespace Final_Project.ViewModel
     {
         public string Id { get; set; }
         public string? UserName { get; set; }
-        [Required]
-        [EmailAddress]
-        [Remote("IsEmailAvailable", "Account", ErrorMessage = "The email address is already in use.")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
         public int? Age { get; set; }
         public string? Gender { get; set; }
+<<<<<<< HEAD
         public IFormFile? Image { get; set; }
         public string? ImageName { get; set; }
+=======
+>>>>>>> bd3ba7c277c241f2ac4971a568c8af643ccc67b9
         public string? Country { get; set; }
         public string? City { get; set; }
         public string? Region { get; set; }

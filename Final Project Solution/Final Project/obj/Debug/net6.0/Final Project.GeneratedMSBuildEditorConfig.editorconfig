@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Account/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +32,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb25Eb2N0b3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Clinic/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Clinic/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Clinic/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Clinic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Doctor/Detailes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERldGFpbGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Shared/_MyLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeUxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Shared/_OurDoctors.cshtml]
@@ -71,7 +87,3 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ouibto4ib5
-
-[D:/VisualApps/New folder/ITI-Final-Project/Final Project Solution/Final Project/Views/Shared/_MyLayout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeUxheW91dC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = b-hdt5f46s1k

@@ -10,8 +10,8 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Registration" method="post" enctype="multipart/form-data">
-            <div asp-validation-summary="All" class="text-danger"></div>
+        <form asp-action="Registration">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="UserName" class="control-label"></label>
                 <input asp-for="UserName" class="form-control" />
@@ -47,18 +47,22 @@
                 <input asp-for="Gender" class="form-control" />
                 <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
-            <div class="form-group">
+@*             <div class="form-group">
                 <div class="form-group">
                     <label asp-for="RoleName"></label>
                     <select asp-for="RoleName" asp-items="@ViewBag.AllRoles" class="form-control">
                     </select>
                 </div>
+<<<<<<< HEAD
             </div>
             <div class="form-group SpecialistDoctordiv">
                 <label asp-for="Image" class="control-label">select Image</label>
                 <input type="file" asp-for="Image" class="form-control" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
+=======
+            </div> *@
+>>>>>>> bd3ba7c277c241f2ac4971a568c8af643ccc67b9
             <div class="form-group SpecialistDoctordiv">
                 <label asp-for="Country" class="control-label"></label>
                 <input asp-for="Country" class="form-control" />
@@ -85,6 +89,13 @@
                 <span asp-validation-for="SpecialistDoctor" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="RoleName"></label>
+                    <select asp-for="RoleName" asp-items="@ViewBag.AllRoles" class="form-control">
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -100,9 +111,6 @@
         display: none;
     }
 </style>
-
-<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
