@@ -546,3 +546,21 @@ E:\Final Project Iti\ITI-Final-Project\Final Project Solution\Final Project\obj\
 E:\Final Project Iti\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.pdb
 E:\Final Project Iti\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.genruntimeconfig.cache
 E:\Final Project Iti\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\ref\Final Project.dll
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.csproj.AssemblyReference.cache
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final_Project.Properties.Resources.resources
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.csproj.GenerateResource.cache
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.AssemblyInfoInputs.cache
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.AssemblyInfo.cs
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.csproj.CoreCompileInputs.cache
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.MvcApplicationPartsAssemblyInfo.cache
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.RazorAssemblyInfo.cache
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.RazorAssemblyInfo.cs
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.dll
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\refint\Final Project.dll
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\Final Project.pdb
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\staticwebassets\msbuild.Final Project.Microsoft.AspNetCore.StaticWebAssets.props
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\staticwebassets\msbuild.build.Final Project.props
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Final Project.props
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Final Project.props
+D:\VisualApps\New folder\ITI-Final-Project\Final Project Solution\Final Project\obj\Debug\net6.0\staticwebassets.pack.json
