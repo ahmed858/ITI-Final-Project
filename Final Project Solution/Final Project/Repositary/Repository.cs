@@ -22,6 +22,10 @@ namespace Final_Project.Repositary
         {
             return db.Set<TEntity>().Find(Id);
         }
+        public TEntity GetByIDstring(string Id)
+        {
+            return db.Set<TEntity>().Find(Id);
+        }
 
         public void Add(TEntity entity)
         {

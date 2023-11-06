@@ -5,6 +5,7 @@ namespace Final_Project.ViewModel
 {
     public class UserRegisterVM
     {
+        public string Id { get; set; }
         public string? UserName { get; set; }
         [Required]
         [EmailAddress]
@@ -14,6 +15,7 @@ namespace Final_Project.ViewModel
         public int? Age { get; set; }
         public string? Gender { get; set; }
         public IFormFile? Image { get; set; }
+        public string? ImageName { get; set; }
         public string? Country { get; set; }
         public string? City { get; set; }
         public string? Region { get; set; }

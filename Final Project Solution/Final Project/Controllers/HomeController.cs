@@ -1,4 +1,9 @@
 ﻿using Final_Project.Models;
+using Final_Project.Models.DataContext;
+using Final_Project.Models.DomainModels;
+using Final_Project.Repositary;
+using Final_Project.ViewModel;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,17 +12,44 @@ namespace Final_Project.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly UserRepositry userRepositry;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly DataContext db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, UserRepositry userRepositry, UserManager<ApplicationUser> userManager, DataContext _db)
         {
             _logger = logger;
+            this.userRepositry = userRepositry;
+            this.userManager = userManager;
+            db = _db;
         }
-
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
-        }
+            var users = await userManager.GetUsersInRoleAsync("Doctor");
+            List<UserRegisterVM> doctors = new List<UserRegisterVM>();
+            foreach (var doc in users)
+            {
+                doctors.Add(new UserRegisterVM()
+                {
+                    Id= doc.Id,
+                    UserName = doc.UserName,
+                    PhoneNumber = doc.PhoneNumber,
+                    Email = doc.Email,
+                    SpecialistDoctor = db.SpecialDoctors.FirstOrDefault(d => d.DoctorId == doc.Id).SpecialName,
+                    Gender = doc.Gender,
+                    Age = doc.Age,
+                    City = doc.City,
+                    Country = doc.Country,
+                    Region = doc.Region,
+                    Doctor_State = doc.Doctor_State,
+                    ImageName=doc.ImageName
+                });
 
+            }
+
+            //return PartialView("_OurDoctors", doctors);
+            return View(doctors);
+        }
         public IActionResult Privacy()
         {
             return View();
